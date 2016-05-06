@@ -1,7 +1,7 @@
 #ifndef _BLK_H
 #define _BLK_H
 
-#define NR_BLK_DEV	7
+#define NR_BLK_DEV	7 ///< number of block devices
 /*
  * NR_REQUEST is the number of entries in the request-queue.
  * NOTE that writes may use only the low 2/3 of these: reads

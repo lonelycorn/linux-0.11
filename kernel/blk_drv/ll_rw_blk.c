@@ -154,6 +154,7 @@ void ll_rw_block(int rw, struct buffer_head * bh)
 	make_request(major,rw,bh);
 }
 
+/// Initialize block drive requests
 void blk_dev_init(void)
 {
 	int i;

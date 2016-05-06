@@ -28,8 +28,11 @@
 #include <linux/head.h>
 #include <linux/kernel.h>
 
+/// FIXME: why volatile here?
 volatile void do_exit(long code);
 
+/// Out-of-memory warning.
+/// FIXME: why volatile here?
 static inline volatile void oom(void)
 {
 	printk("out of memory\n\r");
@@ -43,7 +46,7 @@ __asm__("movl %%eax,%%cr3"::"a" (0))
 #define LOW_MEM 0x100000
 #define PAGING_MEMORY (15*1024*1024)
 #define PAGING_PAGES (PAGING_MEMORY>>12)
-#define MAP_NR(addr) (((addr)-LOW_MEM)>>12)
+#define MAP_NR(addr) (((addr)-LOW_MEM)>>12) ///< Find page number for the given address
 #define USED 100
 
 #define CODE_SPACE(addr) ((((addr)+4095)&~4095) < \
@@ -54,6 +57,8 @@ static long HIGH_MEMORY = 0;
 #define copy_page(from,to) \
 __asm__("cld ; rep ; movsl"::"S" (from),"D" (to),"c" (1024):"cx","di","si")
 
+/// map from page id to ???
+/// 1k bytes per page. 
 static unsigned char mem_map [ PAGING_PAGES ] = {0,};
 
 /*
@@ -396,6 +401,7 @@ void do_no_page(unsigned long error_code,unsigned long address)
 	oom();
 }
 
+/// Initialize memory pages
 void mem_init(long start_mem, long end_mem)
 {
 	int i;
@@ -403,10 +409,10 @@ void mem_init(long start_mem, long end_mem)
 	HIGH_MEMORY = end_mem;
 	for (i=0 ; i<PAGING_PAGES ; i++)
 		mem_map[i] = USED;
-	i = MAP_NR(start_mem);
+	i = MAP_NR(start_mem); // first page number of main memory
 	end_mem -= start_mem;
-	end_mem >>= 12;
-	while (end_mem-->0)
+	end_mem >>= 12; // number of pages of main memory
+	while (end_mem-->0) // mark main memory pages as not used
 		mem_map[i++]=0;
 }
 

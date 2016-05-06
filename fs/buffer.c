@@ -3,7 +3,7 @@
  *
  *  (C) 1991  Linus Torvalds
  */
-
+/// buffer is for block device IO
 /*
  *  'buffer.c' implements the buffer-cache functions. Race-conditions have
  * been avoided by NEVER letting a interrupt change a buffer (except for the
@@ -345,6 +345,7 @@ struct buffer_head * breada(int dev,int first, ...)
 	return (NULL);
 }
 
+/// Initialize the buffer. 
 void buffer_init(long buffer_end)
 {
 	struct buffer_head * h = start_buffer;

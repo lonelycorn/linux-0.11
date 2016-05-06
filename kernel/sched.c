@@ -382,6 +382,7 @@ int sys_nice(long increment)
 	return 0;
 }
 
+/// Initialize the scheduler
 void sched_init(void)
 {
 	int i;

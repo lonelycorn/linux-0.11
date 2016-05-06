@@ -454,6 +454,7 @@ void do_fd_request(void)
 	add_timer(ticks_to_floppy_on(current_drive),&floppy_on_interrupt);
 }
 
+/// Initialize the floppy drive
 void floppy_init(void)
 {
 	blk_dev[MAJOR_NR].request_fn = DEVICE_REQUEST;

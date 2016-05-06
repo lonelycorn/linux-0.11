@@ -102,6 +102,7 @@ struct tty_queue * table_list[]={
 	&tty_table[2].read_q, &tty_table[2].write_q
 	};
 
+/// Initialize TTY's
 void tty_init(void)
 {
 	rs_init();
@@ -344,6 +345,7 @@ void do_tty_interrupt(int tty)
 	copy_to_cooked(tty_table+tty);
 }
 
+/// Initialize char devices (e.g. serial ports)
 void chr_dev_init(void)
 {
 }

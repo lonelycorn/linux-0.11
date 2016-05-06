@@ -34,13 +34,14 @@ static void init(int port)
 	(void)inb(port);	/* read data port to reset things (?) */
 }
 
+/// FIXME: Initialize RS-232 and RS-485 devices???
 void rs_init(void)
 {
 	set_intr_gate(0x24,rs1_interrupt);
 	set_intr_gate(0x23,rs2_interrupt);
 	init(tty_table[1].read_q.data);
 	init(tty_table[2].read_q.data);
-	outb(inb_p(0x21)&0xE7,0x21);
+	outb(inb_p(0x21)&0xE7,0x21); // FIXME: what is this line doing here?
 }
 
 /*

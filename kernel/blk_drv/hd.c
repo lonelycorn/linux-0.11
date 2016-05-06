@@ -340,6 +340,7 @@ void do_hd_request(void)
 		panic("unknown hd-command");
 }
 
+/// Initialize the hard disk
 void hd_init(void)
 {
 	blk_dev[MAJOR_NR].request_fn = DEVICE_REQUEST;

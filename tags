@@ -42,7 +42,7 @@ B75	include/termios.h	135;"	d
 B9600	include/termios.h	146;"	d
 BADNESS	fs/buffer.c	205;"	d	file:
 BBD_ERR	include/linux/hdreg.h	50;"	d
-BCD_TO_BIN	init/main.c	74;"	d	file:
+BCD_TO_BIN	init/main.c	76;"	d	file:
 BLOCK_SIZE	include/linux/fs.h	49;"	d
 BLOCK_SIZE_BITS	include/linux/fs.h	50;"	d
 BOOTSEG	boot/bootsect.s	/^BOOTSEG  = 0x07c0			! original address of boot-sector$/;"	d
@@ -73,9 +73,9 @@ CHARS	include/linux/tty.h	30;"	d
 CIBAUD	include/termios.h	162;"	d
 CLOCAL	include/termios.h	161;"	d
 CLOCKS_PER_SEC	include/time.h	14;"	d
-CMOS_READ	init/main.c	69;"	d	file:
+CMOS_READ	init/main.c	70;"	d	file:
 CMOS_READ	kernel/blk_drv/hd.c	28;"	d	file:
-CODE_SPACE	mm/memory.c	49;"	d	file:
+CODE_SPACE	mm/memory.c	52;"	d	file:
 COPYBLK	fs/buffer.c	283;"	d	file:
 CPARENB	include/termios.h	158;"	d
 CPARODD	include/termios.h	159;"	d
@@ -131,7 +131,7 @@ DMA_READ	include/linux/fdreg.h	68;"	d
 DMA_WRITE	include/linux/fdreg.h	69;"	d
 DRIVE	kernel/blk_drv/floppy.c	54;"	d	file:
 DRIVERS	Makefile	/^DRIVERS =kernel\/blk_drv\/blk_drv.a kernel\/chr_drv\/chr_drv.a$/;"	m
-DRIVE_INFO	init/main.c	59;"	d	file:
+DRIVE_INFO	init/main.c	60;"	d	file:
 DRQ_STAT	include/linux/hdreg.h	27;"	d
 DS	kernel/system_call.s	/^DS		= 0x18$/;"	d
 E2BIG	include/errno.h	26;"	d
@@ -197,7 +197,7 @@ ETXTBSY	include/errno.h	45;"	d
 EXDEV	include/errno.h	37;"	d
 EXTA	include/termios.h	149;"	d
 EXTB	include/termios.h	150;"	d
-EXT_MEM_K	init/main.c	58;"	d	file:
+EXT_MEM_K	init/main.c	59;"	d	file:
 FD_CLOEXEC	include/fcntl.h	33;"	d
 FD_DATA	include/linux/fdreg.h	17;"	d
 FD_DCR	include/linux/fdreg.h	20;"	d
@@ -322,7 +322,7 @@ LDT_NUL	include/linux/head.h	16;"	d
 LEFT	include/linux/tty.h	27;"	d
 LEFT	kernel/vsprintf.c	31;"	d	file:
 LIBS	Makefile	/^LIBS	=lib\/lib.a$/;"	m
-LOW_MEM	mm/memory.c	43;"	d	file:
+LOW_MEM	mm/memory.c	46;"	d	file:
 L_CANON	kernel/chr_drv/tty_io.c	32;"	d	file:
 L_ECHO	kernel/chr_drv/tty_io.c	34;"	d	file:
 L_ECHOCTL	kernel/chr_drv/tty_io.c	37;"	d	file:
@@ -334,7 +334,7 @@ MAJOR	include/linux/fs.h	33;"	d
 MAJOR_NR	kernel/blk_drv/floppy.c	41;"	d	file:
 MAJOR_NR	kernel/blk_drv/hd.c	25;"	d	file:
 MAJOR_NR	kernel/blk_drv/ramdisk.c	17;"	d	file:
-MAP_NR	mm/memory.c	46;"	d	file:
+MAP_NR	mm/memory.c	49;"	d	file:
 MARK_ERR	include/linux/hdreg.h	45;"	d
 MATH	Makefile	/^MATH	=kernel\/math\/math.a$/;"	m
 MAX	fs/file_dev.c	15;"	d	file:
@@ -426,7 +426,7 @@ ONLCR	include/termios.h	101;"	d
 ONLRET	include/termios.h	104;"	d
 ONOCR	include/termios.h	103;"	d
 OPOST	include/termios.h	99;"	d
-ORIG_ROOT_DEV	init/main.c	60;"	d	file:
+ORIG_ROOT_DEV	init/main.c	61;"	d	file:
 ORIG_VIDEO_COLS	kernel/chr_drv/console.c	43;"	d	file:
 ORIG_VIDEO_EGA_AX	kernel/chr_drv/console.c	45;"	d	file:
 ORIG_VIDEO_EGA_BX	kernel/chr_drv/console.c	46;"	d	file:
@@ -457,8 +457,8 @@ PAGE_SIZE	include/a.out.h	79;"	d
 PAGE_SIZE	include/a.out.h	88;"	d
 PAGE_SIZE	include/a.out.h	92;"	d
 PAGE_SIZE	include/linux/mm.h	4;"	d
-PAGING_MEMORY	mm/memory.c	44;"	d	file:
-PAGING_PAGES	mm/memory.c	45;"	d	file:
+PAGING_MEMORY	mm/memory.c	47;"	d	file:
+PAGING_PAGES	mm/memory.c	48;"	d	file:
 PARENB	include/termios.h	165;"	d
 PARMRK	include/termios.h	86;"	d
 PARODD	include/termios.h	166;"	d
@@ -665,7 +665,7 @@ TSTPMASK	kernel/chr_drv/tty_io.c	21;"	d	file:
 TTY_BUF_SIZE	include/linux/tty.h	14;"	d
 TTY_BUF_SIZE	include/termios.h	4;"	d
 TYPE	kernel/blk_drv/floppy.c	53;"	d	file:
-USED	mm/memory.c	47;"	d	file:
+USED	mm/memory.c	50;"	d	file:
 VDISCARD	include/termios.h	77;"	d
 VEOF	include/termios.h	68;"	d
 VEOL	include/termios.h	75;"	d
@@ -931,7 +931,7 @@ _system_call	kernel/system_call.s	/^_system_call:$/;"	l
 _timer_interrupt	kernel/system_call.s	/^_timer_interrupt:$/;"	l
 _tmp_floppy_area	boot/head.s	/^_tmp_floppy_area:$/;"	l
 a	include/linux/head.h	/^	unsigned long a,b;$/;"	m	struct:desc_struct
-a	kernel/sched.c	/^	long * a;$/;"	m	struct:__anon1	file:
+a	kernel/sched.c	/^	long * a;$/;"	m	struct:__anon4	file:
 a_bss	include/a.out.h	/^  unsigned a_bss;		\/* length of uninitialized data area for file, in bytes *\/$/;"	m	struct:exec
 a_data	include/a.out.h	/^  unsigned a_data;		\/* length of data, in bytes *\/$/;"	m	struct:exec
 a_drsize	include/a.out.h	/^  unsigned a_drsize;		\/* length of relocation info for data, in bytes *\/$/;"	m	struct:exec
@@ -952,7 +952,7 @@ argv	init/main.c	/^static char * argv[] = { "-\/bin\/sh",NULL };$/;"	v	file:
 argv_rc	init/main.c	/^static char * argv_rc[] = { "\/bin\/sh", NULL };$/;"	v	file:
 attr	kernel/chr_drv/console.c	/^static unsigned char	attr=0x07;$/;"	v	file:
 b	include/linux/head.h	/^	unsigned long a,b;$/;"	m	struct:desc_struct
-b	kernel/sched.c	/^	short b;$/;"	m	struct:__anon1	file:
+b	kernel/sched.c	/^	short b;$/;"	m	struct:__anon4	file:
 b_blocknr	include/linux/fs.h	/^	unsigned long b_blocknr;	\/* block number *\/$/;"	m	struct:buffer_head
 b_count	include/linux/fs.h	/^	unsigned char b_count;		\/* users using this block *\/$/;"	m	struct:buffer_head
 b_data	include/linux/fs.h	/^	char * b_data;			\/* pointer to data block (1024 bytes) *\/$/;"	m	struct:buffer_head
@@ -1005,7 +1005,7 @@ buffer	kernel/blk_drv/blk.h	/^	char * buffer;$/;"	m	struct:request
 buffer_block	include/linux/fs.h	/^typedef char buffer_block[BLOCK_SIZE];$/;"	t
 buffer_head	include/linux/fs.h	/^struct buffer_head {$/;"	s
 buffer_init	fs/buffer.c	/^void buffer_init(long buffer_end)$/;"	f
-buffer_memory_end	init/main.c	/^static long buffer_memory_end = 0;$/;"	v	file:
+buffer_memory_end	init/main.c	/^static long buffer_memory_end = 0; \/\/\/< last address of buffer memory. Start is always 0$/;"	v	file:
 buffer_wait	fs/buffer.c	/^static struct task_struct * buffer_wait = NULL;$/;"	v	typeref:struct:task_struct	file:
 c_cc	include/termios.h	/^	unsigned char c_cc[NCCS];	\/* control characters *\/$/;"	m	struct:termios
 c_cc	include/termios.h	/^	unsigned char c_cc[NCC];	\/* control characters *\/$/;"	m	struct:termio
@@ -1039,7 +1039,7 @@ con_write	kernel/chr_drv/console.c	/^void con_write(struct tty_struct * tty)$/;"
 controller_ready	kernel/blk_drv/hd.c	/^static int controller_ready(void)$/;"	f	file:
 copy_buffer	kernel/blk_drv/floppy.c	155;"	d	file:
 copy_mem	kernel/fork.c	/^int copy_mem(int nr,struct task_struct * p)$/;"	f
-copy_page	mm/memory.c	54;"	d	file:
+copy_page	mm/memory.c	57;"	d	file:
 copy_page_tables	mm/memory.c	/^int copy_page_tables(unsigned long from,unsigned long to,long size)$/;"	f
 copy_process	kernel/fork.c	/^int copy_process(int nr,long ebp,long edi,long esi,long gs,long none,$/;"	f
 copy_strings	fs/exec.c	/^static unsigned long copy_strings(int argc,char ** argv,unsigned long *page,$/;"	f	file:
@@ -1097,7 +1097,7 @@ die	kernel/traps.c	/^static void die(char * str,long esp_ptr,long nr)$/;"	f	file
 die	tools/build.c	/^void die(char * str)$/;"	f
 dir_entry	include/linux/fs.h	/^struct dir_entry {$/;"	s
 dir_namei	fs/namei.c	/^static struct m_inode * dir_namei(const char * pathname,$/;"	f	file:
-div_t	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	t	typeref:struct:__anon3
+div_t	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	t	typeref:struct:__anon2
 do_bounds	kernel/traps.c	/^void do_bounds(long esp, long error_code)$/;"	f
 do_coprocessor_error	kernel/traps.c	/^void do_coprocessor_error(long esp, long error_code)$/;"	f
 do_coprocessor_segment_overrun	kernel/traps.c	/^void do_coprocessor_segment_overrun(long esp, long error_code)$/;"	f
@@ -1309,8 +1309,8 @@ idt_descr	boot/head.s	/^idt_descr:$/;"	l
 iget	fs/inode.c	/^struct m_inode * iget(int dev,int nr)$/;"	f
 ignore_int	boot/head.s	/^ignore_int:$/;"	l
 immoutb_p	kernel/blk_drv/floppy.c	50;"	d	file:
-inb	include/asm/io.h	5;"	d
-inb_p	include/asm/io.h	17;"	d
+inb	include/asm/io.h	6;"	d
+inb_p	include/asm/io.h	21;"	d
 init	init/main.c	/^void init(void)$/;"	f
 init	kernel/chr_drv/serial.c	/^static void init(int port)$/;"	f	file:
 init_bucket_desc	lib/malloc.c	/^static inline void init_bucket_desc()$/;"	f	file:
@@ -1324,7 +1324,7 @@ insert_into_queues	fs/buffer.c	/^static inline void insert_into_queues(struct bu
 insert_line	kernel/chr_drv/console.c	/^static void insert_line(void)$/;"	f	file:
 int_msg	boot/head.s	/^int_msg:$/;"	l
 interruptible_sleep_on	kernel/sched.c	/^void interruptible_sleep_on(struct task_struct **p)$/;"	f
-invalidate	mm/memory.c	39;"	d	file:
+invalidate	mm/memory.c	42;"	d	file:
 invalidate_buffers	fs/buffer.c	/^void inline invalidate_buffers(int dev)$/;"	f
 invalidate_inodes	fs/inode.c	/^void invalidate_inodes(int dev)$/;"	f
 ioctl_ptr	fs/ioctl.c	/^typedef int (*ioctl_ptr)(int dev,int cmd,int arg);$/;"	t	file:
@@ -1361,7 +1361,7 @@ l_type	include/fcntl.h	/^	short l_type;$/;"	m	struct:flock
 l_whence	include/fcntl.h	/^	short l_whence;$/;"	m	struct:flock
 last_pid	kernel/fork.c	/^long last_pid=0;$/;"	v
 last_task_used_math	kernel/sched.c	/^struct task_struct *last_task_used_math = NULL;$/;"	v	typeref:struct:task_struct
-ldiv_t	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	t	typeref:struct:__anon4
+ldiv_t	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	t	typeref:struct:__anon3
 ldt	include/linux/sched.h	/^	long	ldt;		\/* 16 high bits zero *\/$/;"	m	struct:tss_struct
 ldt	include/linux/sched.h	/^	struct desc_struct ldt[3];$/;"	m	struct:task_struct	typeref:struct:task_struct::desc_struct
 leader	include/linux/sched.h	/^	long pid,father,pgrp,session,leader;$/;"	m	struct:task_struct
@@ -1381,7 +1381,7 @@ m_inode	include/linux/fs.h	/^struct m_inode {$/;"	s
 machine	include/sys/utsname.h	/^	char machine[9];$/;"	m	struct:utsname
 main	init/main.c	/^void main(void)		\/* This really IS void, no error here. *\/$/;"	f
 main	tools/build.c	/^int main(int argc, char ** argv)$/;"	f
-main_memory_start	init/main.c	/^static long main_memory_start = 0;$/;"	v	file:
+main_memory_start	init/main.c	/^static long main_memory_start = 0; \/\/\/< start address of main memory. End is always @p memory_end$/;"	v	file:
 make_request	kernel/blk_drv/ll_rw_blk.c	/^static void make_request(int major,int rw, struct buffer_head * bh)$/;"	f	file:
 malloc	lib/malloc.c	/^void *malloc(unsigned int len)$/;"	f
 match	fs/namei.c	/^static int match(int len,const char * name,struct dir_entry * de)$/;"	f	file:
@@ -1395,7 +1395,7 @@ memcmp	include/string.h	/^extern inline int memcmp(const void * cs,const void * 
 memcpy	include/asm/memory.h	8;"	d
 memcpy	include/string.h	/^extern inline void * memcpy(void * dest,const void * src, int n)$/;"	f
 memmove	include/string.h	/^extern inline void * memmove(void * dest,const void * src, int n)$/;"	f
-memory_end	init/main.c	/^static long memory_end = 0;$/;"	v	file:
+memory_end	init/main.c	/^static long memory_end = 0; \/\/\/< last address of memory. Start is always 0$/;"	v	file:
 memset	include/string.h	/^extern inline void * memset(void * s,char c,int count)$/;"	f
 minus	kernel/chr_drv/keyboard.S	/^minus:	cmpb $1,e0$/;"	l
 mode	kernel/chr_drv/keyboard.S	/^mode:	.byte 0		\/* caps, alt, ctrl and shift mode *\/$/;"	l
@@ -1409,12 +1409,12 @@ mount_root	fs/super.c	/^void mount_root(void)$/;"	f
 move_to_user_mode	include/asm/system.h	1;"	d
 msg1	boot/bootsect.s	/^msg1:$/;"	l
 n_desc	include/a.out.h	/^  short n_desc;$/;"	m	struct:nlist
-n_name	include/a.out.h	/^    char *n_name;$/;"	m	union:nlist::__anon2
-n_next	include/a.out.h	/^    struct nlist *n_next;$/;"	m	union:nlist::__anon2	typeref:struct:nlist::__anon2::nlist
+n_name	include/a.out.h	/^    char *n_name;$/;"	m	union:nlist::__anon1
+n_next	include/a.out.h	/^    struct nlist *n_next;$/;"	m	union:nlist::__anon1	typeref:struct:nlist::__anon1::nlist
 n_other	include/a.out.h	/^  char n_other;$/;"	m	struct:nlist
-n_strx	include/a.out.h	/^    long n_strx;$/;"	m	union:nlist::__anon2
+n_strx	include/a.out.h	/^    long n_strx;$/;"	m	union:nlist::__anon1
 n_type	include/a.out.h	/^  unsigned char n_type;$/;"	m	struct:nlist
-n_un	include/a.out.h	/^  } n_un;$/;"	m	struct:nlist	typeref:union:nlist::__anon2
+n_un	include/a.out.h	/^  } n_un;$/;"	m	struct:nlist	typeref:union:nlist::__anon1
 n_value	include/a.out.h	/^  unsigned long n_value;$/;"	m	struct:nlist
 name	include/linux/fs.h	/^	char name[NAME_LEN];$/;"	m	struct:dir_entry
 namei	fs/namei.c	/^struct m_inode * namei(const char * pathname)$/;"	f
@@ -1452,8 +1452,8 @@ oom	mm/memory.c	/^static inline volatile void oom(void)$/;"	f	file:
 open	lib/open.c	/^int open(const char * filename, int flag, ...)$/;"	f
 open_namei	fs/namei.c	/^int open_namei(const char * pathname, int flag, int mode,$/;"	f
 origin	kernel/chr_drv/console.c	/^static unsigned long	origin;		\/* Used for EGA\/VGA fast scroll	*\/$/;"	v	file:
-outb	include/asm/io.h	1;"	d
-outb_p	include/asm/io.h	11;"	d
+outb	include/asm/io.h	2;"	d
+outb_p	include/asm/io.h	14;"	d
 output_byte	kernel/blk_drv/floppy.c	/^static void output_byte(char byte)$/;"	f	file:
 page	lib/malloc.c	/^	void			*page;$/;"	m	struct:bucket_desc	file:
 panic	kernel/panic.c	/^volatile void panic(const char * s)$/;"	f
@@ -1491,8 +1491,8 @@ put_queue	kernel/chr_drv/keyboard.S	/^put_queue:$/;"	l
 put_super	fs/super.c	/^void put_super(int dev)$/;"	f
 pwd	include/linux/sched.h	/^	struct m_inode * pwd;$/;"	m	struct:task_struct	typeref:struct:task_struct::m_inode
 ques	kernel/chr_drv/console.c	/^static unsigned long	ques=0;$/;"	v	file:
-quot	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon3
-quot	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon4
+quot	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon2
+quot	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon3
 quotient	kernel/chr_drv/tty_ioctl.c	/^static unsigned short quotient[] = {$/;"	v	file:
 r_address	include/a.out.h	/^  int r_address;$/;"	m	struct:relocation_info
 r_extern	include/a.out.h	/^  unsigned int r_extern:1;$/;"	m	struct:relocation_info
@@ -1523,8 +1523,8 @@ refcnt	lib/malloc.c	/^	unsigned short		refcnt;$/;"	m	struct:bucket_desc	file:
 release	include/sys/utsname.h	/^	char release[9];$/;"	m	struct:utsname
 release	kernel/exit.c	/^void release(struct task_struct * p)$/;"	f
 relocation_info	include/a.out.h	/^struct relocation_info$/;"	s
-rem	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon3
-rem	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon4
+rem	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon2
+rem	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon3
 remove_from_queues	fs/buffer.c	/^static inline void remove_from_queues(struct buffer_head * bh)$/;"	f	file:
 rep_int	kernel/chr_drv/rs_io.s	/^rep_int:$/;"	l
 reply_buffer	kernel/blk_drv/floppy.c	/^static unsigned char reply_buffer[MAX_REPLIES];$/;"	v	file:
@@ -1687,7 +1687,7 @@ st_size	include/sys/stat.h	/^	off_t	st_size;$/;"	m	struct:stat
 st_space	include/linux/sched.h	/^	long	st_space[20];	\/* 8*10 bytes for each FP-reg = 80 bytes *\/$/;"	m	struct:i387_struct
 st_uid	include/sys/stat.h	/^	uid_t	st_uid;$/;"	m	struct:stat
 stack	kernel/sched.c	/^	char stack[PAGE_SIZE];$/;"	m	union:task_union	file:
-stack_start	kernel/sched.c	/^	} stack_start = { & user_stack [PAGE_SIZE>>2] , 0x10 };$/;"	v	typeref:struct:__anon1
+stack_start	kernel/sched.c	/^	} stack_start = { & user_stack [PAGE_SIZE>>2] , 0x10 };$/;"	v	typeref:struct:__anon4
 start	boot/bootsect.s	/^start:$/;"	l
 start	boot/setup.s	/^start:$/;"	l
 start_buffer	fs/buffer.c	/^struct buffer_head * start_buffer = (struct buffer_head *) &end;$/;"	v	typeref:struct:buffer_head

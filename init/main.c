@@ -55,6 +55,7 @@ extern long startup_time;
 /*
  * This is set up by the setup-routine at boot-time
  */
+/// FIXME: where these magic numbers? platform-specific values?
 #define EXT_MEM_K (*(unsigned short *)0x90002)
 #define DRIVE_INFO (*(struct drive_info *)0x90080)
 #define ORIG_ROOT_DEV (*(unsigned short *)0x901FC)
@@ -71,8 +72,10 @@ outb_p(0x80|addr,0x70); \
 inb_p(0x71); \
 })
 
+/// Convert binary-coded decimals (4-bit) to real binary values.
 #define BCD_TO_BIN(val) ((val)=((val)&15) + ((val)>>4)*10)
 
+/// Read CMOS time to initialize kernel time
 static void time_init(void)
 {
 	struct tm time;
@@ -95,9 +98,9 @@ static void time_init(void)
 	startup_time = kernel_mktime(&time);
 }
 
-static long memory_end = 0;
-static long buffer_memory_end = 0;
-static long main_memory_start = 0;
+static long memory_end = 0; ///< last address of memory. Start is always 0
+static long buffer_memory_end = 0; ///< last address of buffer memory. Start is always 0
+static long main_memory_start = 0; ///< start address of main memory. End is always @p memory_end
 
 struct drive_info { char dummy[32]; } drive_info;
 
@@ -133,10 +136,10 @@ void main(void)		/* This really IS void, no error here. */
 	buffer_init(buffer_memory_end);
 	hd_init();
 	floppy_init();
-	sti();
+	sti(); // enable all interrupts
 	move_to_user_mode();
 	if (!fork()) {		/* we count on this going ok */
-		init();
+		init(); // user-mode: init 
 	}
 /*
  *   NOTE!!   For any other task 'pause()' would mean we have to get a

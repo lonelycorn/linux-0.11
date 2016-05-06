@@ -178,6 +178,7 @@ void do_reserved(long esp, long error_code)
 	die("reserved (15,17-47) error",esp,error_code);
 }
 
+/// Initialize signal traps: register signals with handlers
 void trap_init(void)
 {
 	int i;
@@ -202,7 +203,7 @@ void trap_init(void)
 	for (i=17;i<48;i++)
 		set_trap_gate(i,&reserved);
 	set_trap_gate(45,&irq13);
-	outb_p(inb_p(0x21)&0xfb,0x21);
-	outb(inb_p(0xA1)&0xdf,0xA1);
+	outb_p(inb_p(0x21)&0xfb,0x21); // FIXME: what is this line doing?
+	outb(inb_p(0xA1)&0xdf,0xA1); // FIXME: what is this line doing?
 	set_trap_gate(39,&parallel_interrupt);
 }
